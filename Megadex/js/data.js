@@ -9,9 +9,51 @@
 
     // TODO: Replace the data with your real data.
     // You can add data from asynchronous sources whenever it becomes available.
-    generateSampleData().forEach(function (item) {
-        list.push(item);
-    });
+
+    function getJSON(url, data, callback, errorCb) {
+        if (data != null) {
+            var params = [];
+            for (var k in data) {
+                params.push(k + "=" + encodeURI(data[k]));
+            }
+            url += "?" + params.join("&");
+        }
+
+        WinJS.xhr(
+            {
+                url: url,
+                responseType: 'json'
+            }
+        ).then(
+            function (r) {
+                if (callback != null)
+                    callback(r.response, r.status);
+            },
+            function (r) {
+                if (errorCb)
+                    errorCb(r.status);
+            }
+        );
+    }
+
+    //generateSampleData().forEach(function (item) {
+    //    list.push(item);
+    //});
+
+    getJSON('js/megadex.json', null, 
+        function (r, status) {
+            if (status == 200) {
+                var r = JSON.parse(r);
+                r.forEach(function (item) {
+                    list.push(item);
+                });
+                console.log(r);
+            }
+        },
+        function (e) {
+            console.log(e);
+        }
+    );
 
     WinJS.Namespace.define("Data", {
         items: groupedItems,
