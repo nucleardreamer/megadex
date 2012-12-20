@@ -30,10 +30,11 @@
         }
 
         .itemdetailpage .content article .item-image {
-            height: 240px;
-            width: 460px;
+            width: 250px;
         }
-
+            .itemdetailpage .content article .item-image img{
+                width: 100%;
+            }
         .itemdetailpage .content article .item-content p {
             margin-top: 10px;
             margin-bottom: 20px;
@@ -62,11 +63,6 @@
 
             .itemdetailpage .content article header .item-title {
                 margin-bottom: 10px;
-            }
-
-            .itemdetailpage .content article .item-image {
-                height: 140px;
-                width: 280px;
             }
 
             .itemdetailpage .content article .item-content {

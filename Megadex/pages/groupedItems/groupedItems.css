@@ -29,6 +29,7 @@
         -ms-grid-rows: max-content;
         display: -ms-inline-grid;
         line-height: 1.5;
+        color: #222;
     }
 
     /* Override default button styles */
@@ -149,11 +150,20 @@
             margin-left: 10px;
             padding: 0;
         }
+            .groupeditemspage .groupeditemslist .item .item-overlay .item-id {
+                margin-top: 4px;
+                max-height: 40px;
+                width: 40px;
+                display: inline-block;
+                color: rgba(255,255,255,0.87);
+                font-size: 15px;
+            }
 
             .groupeditemspage .groupeditemslist .item .item-overlay .item-title {
                 margin-top: 4px;
                 max-height: 40px;
-                width: 202px;
+                width: 150px;
+                display: inline-block;
             }
 
             .groupeditemspage .groupeditemslist .item .item-overlay .item-subtitle {
