@@ -4,7 +4,6 @@
     background-color: #fff;
     color: #222;
 }
-
 .fragment {
     /* Define a grid with rows for a banner and a body */
     -ms-grid-columns: 1fr;
@@ -24,6 +23,7 @@
         .fragment header[role=banner] .win-backbutton {
             margin-left: 39px;
             margin-top: 59px;
+            color: #222;
         }
 
         .fragment header[role=banner] .titlearea {

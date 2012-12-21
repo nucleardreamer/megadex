@@ -125,7 +125,6 @@
                 group: groups.all,
                 id: i.id,
                 title: i.name,
-                description: "test",
                 content: i,
                 backgroundImage: i.img
             };
